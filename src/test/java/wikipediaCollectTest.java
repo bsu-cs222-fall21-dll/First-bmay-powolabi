@@ -1,9 +1,11 @@
 
 import org.junit.jupiter.api.Test;
 
+import java.net.URLConnection;
+
 public class wikipediaCollectTest {
     @Test
-    public boolean connectionTest(String connection){
+    public boolean wikipediaCollectTest(URLConnection connection){
         if (){
 
         }

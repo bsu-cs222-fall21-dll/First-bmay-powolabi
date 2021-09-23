@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.*;
+import JsonPath;
 
 public class wikipediaCollect {
     //public String charset = "UTF-8";
@@ -16,10 +17,9 @@ public class wikipediaCollect {
         return input.toString();
     }
 
-    String query = String.join(getRequest,takeUserInput(),getRequest2);
-
     URLConnection connection;
     {
+        String query = String.join(getRequest,takeUserInput(),getRequest2);
         try {
             connection = new URL(url + query).openConnection();
         } catch (IOException e) {
@@ -27,5 +27,8 @@ public class wikipediaCollect {
         }
     }
 
+    public wikipediaCollect(){
+
+    }
 
 }
