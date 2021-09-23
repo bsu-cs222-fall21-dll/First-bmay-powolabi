@@ -3,8 +3,8 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.*;
 
-public class delLater {
-    public String charset = "UTF-8";
+public class wikipediaCollect {
+    //public String charset = "UTF-8";
     public String url = "https://www.mediawiki.org/w/api.php?";
     public String getRequest = "action=query&prop=";
     public String getRequest2 = "revisions&titles=API|Main%20Page&rvprop=timestamp|user|comment&rvslots=main&formatversion=2";

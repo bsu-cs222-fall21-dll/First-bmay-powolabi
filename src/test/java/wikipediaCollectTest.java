@@ -1,9 +1,9 @@
 
 import org.junit.jupiter.api.Test;
 
-public class delLaterTest {
+public class wikipediaCollectTest {
     @Test
-    public boolean recentChangesCollectionTest(String recentChng){
+    public boolean connectionTest(String connection){
         if (){
 
         }
