@@ -12,8 +12,8 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.0'
-    // https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path
     implementation group: 'com.jayway.jsonpath', name: 'json-path', version: '2.6.0'
+    implementation 'org.slf4j:slf4j-simple:1.7.32'
 
 }
 
