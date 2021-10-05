@@ -18,11 +18,11 @@ public class wikipediaParser {
 
             InputStream user = new ByteArrayInputStream(input.toByteArray());
             InputStream time = new ByteArrayInputStream(input.toByteArray());
-            System.out.println(time.toString());
+
             ArrayList<String> userJpath = JsonPath.read(user, "$..user");
             ArrayList<String> timeJpath = JsonPath.read(time, "$..timestamp");
             ArrayList<String> redirect = JsonPath.read(time, "$..timestamp");
-            System.out.println(timeJpath);
+
             if(!timeJpath.isEmpty()) {
                 for (int i = 0; i < timeJpath.size(); i++) {
                     System.out.println("Time stamp: " + timeJpath.get(i));

@@ -8,7 +8,7 @@ import com.jayway.jsonpath.JsonPath;
 public class main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Which article would you like to see the las editors of?");
+        System.out.println("Which article would you like to see the last editors of?");
         String input = reader.next();
 
         if (input.isEmpty()) {
