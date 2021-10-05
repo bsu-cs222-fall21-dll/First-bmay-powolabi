@@ -25,8 +25,9 @@ public class wikipediaParser {
 
             if(!timeJpath.isEmpty()) {
                 for (int i = 0; i < timeJpath.size(); i++) {
+                    System.out.println("Revision #: " + (i + 1));
                     System.out.println("Time stamp: " + timeJpath.get(i));
-                    System.out.println("User Name: " + userJpath.get(i));
+                    System.out.println("User Name: " + userJpath.get(i) + "\n");
                 }
             } else {
                 System.err.println("There is no data given for the provided search term: error code 2");
