@@ -6,7 +6,7 @@ import com.jayway.jsonpath.JsonPath;
 public class main {
     public static void main(String[] args) {
 
-        String input = "soup";
+        String input = "rabbit";
 
         try {
             InputStream jsonData = wikipediaCollect.buildConnection(input);

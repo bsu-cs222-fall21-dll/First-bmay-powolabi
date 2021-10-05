@@ -17,13 +17,12 @@ import java.util.Scanner;
 public class wikipediaCollect {
 
     public static String formatSearch(String input) {
-        return String.format("https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=%s&rvlimit=30&rvprop=timestamp|user&rvlimit=1", URLEncoder.encode(input, Charset.defaultCharset()));
+        return String.format("https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=%s&rvprop=timestamp|user&rvlimit=30", URLEncoder.encode(input, Charset.defaultCharset()));
     }
 
     public static InputStream buildConnection(String input) throws Exception{
         try {
             URLConnection connection = new URL(formatSearch(input)).openConnection();
-            System.out.println("url searched");
             connection.setRequestProperty("User-Agent", "CS222FirstProject/0.1 (brmay@bsu.edu)");
             return connection.getInputStream();
         } catch (MalformedURLException malformedURLException) {

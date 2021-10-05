@@ -21,8 +21,11 @@ public class wikipediaParser {
             System.out.println(time.toString());
             ArrayList<String> userJpath = JsonPath.read(user, "$..user");
             ArrayList<String> timeJpath = JsonPath.read(time, "$..timestamp");
-            System.out.println("Time stamp: " + timeJpath.get(0));
-            System.out.println("User Name: " + userJpath.get(0));
+            System.out.println(timeJpath);
+            for(int i = 0; i < timeJpath.size(); i++){
+                System.out.println("Time stamp: " + timeJpath.get(i));
+                System.out.println("User Name: " + userJpath.get(i));
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
