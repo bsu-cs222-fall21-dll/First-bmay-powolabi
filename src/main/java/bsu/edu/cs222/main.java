@@ -10,8 +10,7 @@ public class main {
 
         try {
             InputStream jsonData = wikipediaCollect.buildConnection(input);
-            String timeStamp = wikipediaParser.parse(jsonData);
-            System.out.println("Time stamp: " + timeStamp);
+            wikipediaParser.parse(jsonData);
         } catch (Exception e) {
             e.printStackTrace();
         }

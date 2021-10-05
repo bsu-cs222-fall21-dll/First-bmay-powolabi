@@ -11,7 +11,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 public class wikipediaParser {
-    public static String parse(InputStream data) throws IOException{
+    public static void parse(InputStream data) throws IOException{
         try {
             ByteArrayOutputStream input = new ByteArrayOutputStream();
             data.transferTo(input);
@@ -19,13 +19,13 @@ public class wikipediaParser {
             InputStream user = new ByteArrayInputStream(input.toByteArray());
             InputStream time = new ByteArrayInputStream(input.toByteArray());
             System.out.println(time.toString());
-            //ArrayList<String> userJpath = JsonPath.read(user, "$..user");
+            ArrayList<String> userJpath = JsonPath.read(user, "$..user");
             ArrayList<String> timeJpath = JsonPath.read(time, "$..timestamp");
-            String userTime = timeJpath.get(0);
-            return userTime;
+            System.out.println("Time stamp: " + timeJpath.get(0));
+            System.out.println("User Name: " + userJpath.get(0));
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
     }
 }

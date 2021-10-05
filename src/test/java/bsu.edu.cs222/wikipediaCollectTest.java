@@ -16,7 +16,7 @@ class wikipediaCollectTestJson {
         InputStream testData = Thread.currentThread().getContextClassLoader().getResourceAsStream("file.json");
         String timeStamp = null;
         try {
-            timeStamp = wikipediaParser.parse(testData);
+            wikipediaParser.parse(testData);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -29,4 +29,6 @@ class wikipediaCollectTestJson {
         String searchString = "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=soup&rvprop=timestamp&rvlimit=1";
         Assertions.assertEquals(searchString, formatedString);
     }
+
+    
 }
