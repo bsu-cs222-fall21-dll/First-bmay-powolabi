@@ -26,7 +26,7 @@ public class wikipediaCollect {
             connection.setRequestProperty("User-Agent", "CS222FirstProject/0.1 (brmay@bsu.edu)");
             return connection.getInputStream();
         } catch (MalformedURLException malformedURLException) {
-            System.err.print("URL could not be reached: err code 3");
+            System.err.print("URL could not be reached: error code 3");
             throw new Exception(malformedURLException);
         }
     }

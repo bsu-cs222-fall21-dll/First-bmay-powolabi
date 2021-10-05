@@ -29,7 +29,7 @@ public class wikipediaParser {
                     System.out.println("User Name: " + userJpath.get(i));
                 }
             } else {
-                System.err.println("There is no data given for the provided search term: err code 2");
+                System.err.println("There is no data given for the provided search term: error code 2");
                 System.exit(0);
             }
 
